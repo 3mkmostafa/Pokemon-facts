@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Facts</title>
+</head>
+<body>
+
+<header>
+    <h1>Pokémon Facts</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#facts">Facts</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="home">
+        <h2>Welcome to Pokémon Facts!</h2>
+        <p>Discover interesting facts about your favorite Pokémon.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>This website is dedicated to providing accurate and fascinating facts about Pokémon.</p>
+    </section>
+
+    <section id="facts">
+        <h2>Pokémon Facts</h2>
+        <ul id="pokemonFacts">
+            <!-- Pokémon facts will be dynamically added here using JavaScript -->
+        </ul>
+    </section>
+</main>
+<div id="ad-placeholder">
+    <!-- Your ad content goes here -->
+    <img src="ad-image.jpg" alt="Advertisement">
+  </div>
+  
+<footer>
+    <p>&copy; 2024 Pokémon Facts. All rights reserved.</p>
+</footer>
+<style>/* Resetting default browser styles */
+    body, h1, h2, p, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Global styles */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f5f5f5;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 20px;
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 32px;
+    }
+    
+    nav ul {
+        list-style-type: none;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    section {
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        margin-bottom: 10px;
+    }
+    
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }</style>
+<script>// Sample Pokémon facts data (replace with your actual data)
+    const pokemonFactsData = [
+        { name: "Pikachu", fact: "Pikachu is an Electric-type Pokémon." },
+        { name: "Charmander", fact: "Charmander is a Fire-type Pokémon." },
+        { name: "Bulbasaur", fact: "Bulbasaur is a Grass/Poison-type Pokémon." },
+        { name: "Squirtle", fact: "Squirtle is a Water-type Pokémon." }
+        // Add more Pokémon facts as needed
+    ];
+    
+    // Function to display Pokémon facts
+    function displayPokemonFacts() {
+        const pokemonFactsList = document.getElementById("pokemonFacts");
+    
+        // Clear existing content
+        pokemonFactsList.innerHTML = "";
+    
+        // Loop through the Pokémon facts data and create list items
+        pokemonFactsData.forEach(pokemon => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${pokemon.name}: ${pokemon.fact}`;
+            pokemonFactsList.appendChild(listItem);
+        });
+    }
+    
+    // Call the function to display Pokémon facts when the page loads
+    window.onload = function() {
+        displayPokemonFacts();
+    };
+    </script>
+</body>
+</html>
